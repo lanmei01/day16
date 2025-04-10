@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>作业2</title>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e0e8f8, #f0d8e8, #fff0e8);}
+.box{
+      width: 655px;
+      height: 815px;
+      position: relative;
+      background: linear-gradient(135deg, #e0e8f8, #f0d8e8, #fff0e8);
+      border-radius: 40px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+	  overflow:hidden;}
+.tp {
+	position: absolute;
+	bottom: 18px;
+	right: 15px;
+	height: auto;
+	border-radius: 50%;
+	z-index: 9;
+	opacity:0.95;}
+.boxg{
+	    width:600px;
+		height:620px;
+		float:left;
+		margin-top:180px;
+		margin-left:50px;
+		overflow:hidden;
+		position:relative;
+		z-index:1;}
+.gqj{
+	width: 300px;
+    height: 50px;
+    transform: skewX(-30deg) translateZ(20px);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3), 
+                10px 10px 30px rgba(0,0,0,0.2); 
+    perspective: 1000px; 
+    transition: all 0.3s ease;}
+.gqj:hover {
+            transform: skewX(-30deg) 	translateZ(30px) scale(1.1);
+            box-shadow: 
+             8px 8px 20px rgba(0,0,0,0.4),
+             15px 15px 40px rgba(0,0,0,0.3);}
+.box1{
+	width:245px;
+	margin-left:25px;
+	margin-top:560px;
+	float:left;
+	background:linear-gradient(145deg, #F3DEE7   45%, #F8E5E7 55%);}
+.box2{
+	width:208px;
+	height:43px;
+	top:525px;
+	left:85px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:3;}
+.box3{
+	width:282px;
+	height:58px;
+	left:31px;
+	top:485px;
+	position:absolute;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);
+	z-index:2;}
+.box4{
+	width:228px;
+	height:47px;
+	top:448px;
+	left:110px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:4;}
+.box5{
+	width:318px;
+	height:60px;
+	margin-left:45px;
+	margin-top:-210px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box6{
+	width:345px;
+	height:54px;
+	margin-left:50px;
+	margin-top:-261px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box7{
+	width:228px;
+	height:42px;
+	top:321px;
+	left:187px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:5;}
+.box8{
+	width:348px;
+	height:58px;
+	margin-left:82px;
+	margin-top:-322px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box9{
+	width:228px;
+	height:42px;
+	top:265px;
+	left:220px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:6;}
+.box10{
+	width:355px;
+	height:56px;
+	margin-left:107px;
+	margin-top:-378px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box11{
+	width:365px;
+	height:58px;
+	margin-left:131px;
+	margin-top:-436px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box12{
+	width:370px;
+	height:56px;
+	margin-left:155px;
+	margin-top:-485px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box13{
+	width:234px;
+	height:45px;
+	top:158px;
+	left:274px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:7;}
+.box14{
+	width:376px;
+	height:56px;
+	margin-left:183px;
+	margin-top:-542px;
+	float:left;
+	background:linear-gradient(145deg,#F1DCE3    45%, #F0DBE2 55%);}
+.box15{
+	width:242px;
+	height:45px;
+	top:92px;
+	left:305px;
+	position:absolute;
+	background:linear-gradient(135deg, #F7CECE 55%, #F7CECE 45%);
+	z-index:8;}
+.sun {
+	width: 150px;
+	height: 150px;
+	background: linear-gradient(45deg, #ffc8d8 30%, #ffb8c8 70%);
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	margin-left: 478px;
+	box-shadow: 0 0 15px rgba(255, 180, 200, 0.5);
+	z-index: 999;
+	background-color:#ffc8d8;}
+.yh{
+    position: absolute;
+    left: 10px;
+    top: 190px;
+    width: 400px;
+    height: 400px;}
+
+.yhhb {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: scale(0.6);}
+.yhhb:first-child {
+    transform: scale(0.6) 
+               translateX(-59px)  
+               translateY(40px); }
+.yhhb:nth-child(2) {
+    transform: scale(0.4)
+	          rotate(-15deg)     
+			  translateY(636px) 
+			  translateX(-460px);
+			  margin-top:40px;}
+.yhhb:nth-child(2) .hb {
+    background: #F5CBE0; 
+	opacity: 0.8;}
+.yhhb:nth-child(2) .center {
+    background: #FFE4B5; 
+	opacity: 0.6;}
+.hb {
+    position: absolute;
+    width: 66px;
+    height: 69px;
+    background: #f8d8e8;
+    opacity: 0.7;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hb1{
+	border-radius: 0px 80px;
+	transform:rotate(-165deg);
+	top:36px;
+	left:70px;}
+.hb2 {
+	 border-radius: 80px 0px;
+	 transform: rotate(0deg);
+	 top: 33px; 
+	 left: 125px; }
+.hb3 {
+	border-radius: 0px 80px;
+	transform: rotate(-35deg); 
+	top: 80px; 
+	left: 140px; }
+.hb4 {
+	border-radius: 0px 80px;
+	transform: rotate(-165deg);
+    top: 120px; 
+    left: 114px; }
+.hb5 { 
+    border-radius: 80px 0px;
+    transform: rotate(-185deg); 
+	top: 120px; 
+	left: 65px; }
+
+.hb6 { 
+    border-radius: 80px 0px;
+    transform: rotate(233deg); 
+	top: 76px; 
+	left: 45px; }
+
+.center {
+         position: absolute;
+         width: 28px;
+         height: 28px;
+         background: #FFE4B5;
+		 opacity:0.8;
+         border-radius: 50%;
+         top: 115px;
+         left: 125px;
+        transform: translate(-50%, -50%) scale(0.6);}
+ 
+</style>
+</head>
+<body>
+    <div class=" box">
+    	<img src="圆形钢琴.png" width="200"
+        height="188" class="tp" />
+      <div class="sun"></div>
+        <div class="yh">
+            <div class="yhhb">
+                <div class="hb hb1"></div>
+                <div class="hb hb2"></div>
+                <div class="hb hb3"></div>
+                <div class="hb hb4"></div>
+                <div class="hb hb5"></div>
+                <div class="hb hb6"></div>
+                <div class="center"></div>
+            </div>
+            <div class="yhhb">
+                <div class="hb hb1"></div>
+                <div class="hb hb2"></div>
+                <div class="hb hb3"></div>
+                <div class="hb hb4"></div>
+                <div class="hb hb5"></div>
+                <div class="hb hb6"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+        <div class="boxg">
+       	  <div class=" gqj box1"></div>
+          <div class=" gqj box2"></div>
+          <div class=" gqj box3"></div>
+          <div class=" gqj box4"></div>
+          <div class=" gqj box5"></div>
+          <div class=" gqj box6"></div>
+          <div class=" gqj box7"></div>
+          <div class=" gqj box8"></div>
+          <div class=" gqj box9"></div>
+          <div class=" gqj box10"></div>
+          <div class=" gqj box11"></div>
+          <div class=" gqj box12"></div>
+          <div class=" gqj box13"></div>
+          <div class=" gqj box14"></div>
+          <div class=" gqj box15"></div>
+        <div class="bogyf">
+          	<div class="yf yf1"></div>
+          	<div class="yf yf2"></div>
+          	<div class="yf yf3"></div>
+          	<div class="yf yf4"></div>
+</div>
+        </div>
+    </div>
+</body>
+</html>
